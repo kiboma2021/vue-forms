@@ -1,12 +1,13 @@
 <template>
-
+<Form />
 </template>
 
 <script>
+import Form from './components/Form.vue'
 
 export default {
   name: 'App',
-  components: { }
+  components: {Form}
 }
 </script>
 
@@ -18,5 +19,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+body {
+  background: rgb(187, 180, 180);
 }
 </style>
