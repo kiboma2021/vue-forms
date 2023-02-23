@@ -28,7 +28,9 @@
     <div>
         <label>Skill</label>
         <input type="text" v-model="tempSkill" @keyup.alt="addSkill">
-        <div v-for="skill in skills" :key="skill" class="skillbox">{{ skill }}</div>
+        <div v-for="skill in skills" :key="skill" class="skillbox">
+            <span @click="removeSkill(skill)">{{ skill }}</span>
+        </div>
     </div>
 
     <div>
@@ -93,6 +95,11 @@ export default {
                 }
             this.tempSkill = ""
             }
+        },
+        removeSkill(skill) {
+            this.skills = this.skills.filter((item) => {
+                return skill !== item
+            })
         }
     }
 
@@ -142,6 +149,7 @@ input[type="checkbox"] {
     color: white;
     border-radius: 20px;
     padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
 </style>
