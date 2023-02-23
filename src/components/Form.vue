@@ -30,6 +30,25 @@
         <label>Accepts terms and conditions</label>
     </div>
 
+    <div>
+        <input type="checkbox" value="CSS" v-model="units">
+        <label>CSS</label>
+    </div>
+
+    <div>
+        <input type="checkbox" value="HTML" v-model="units">
+        <label>HTML</label>
+    </div>
+
+    <div>
+        <input type="checkbox" value="Python" v-model="units">
+        <label>Python</label>
+    </div>
+
+    <div>
+        <input type="checkbox" value="JavaScript" v-model="units">
+        <label>JavaScript</label>
+    </div>
 
 
     <br> <br>
@@ -41,6 +60,7 @@
   <p>Password: {{ password }}</p>
   <p>Role: {{ role }}</p>
   <p>Accept Terms: {{ terms }}</p>
+  <p>Units: {{ units }}</p>
 </template>
 
 <script>
@@ -52,6 +72,7 @@ export default {
             password: "",
             role: "developer",
             terms: false,
+            units: [],
         }
     }
 
