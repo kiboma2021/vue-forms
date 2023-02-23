@@ -2,22 +2,26 @@
   <form>
     <div>
         <label>Name</label>
-        <input type="name" v-model="name">
+        <input type="name" v-model="name" required>
     </div>
 
     <div>
         <label>Email</label>
-        <input type="email" v-model="email">
+        <input type="email" v-model="email" required>
     </div>
 
 
     <div>
         <label>Password</label>
-        <input type="password" v-model="password">
+        <input type="password" v-model="password" required>
     </div>
 
-
+    <button type="submit" >Submit</button>
   </form>
+
+  <p>Name: {{ name }}</p>
+  <p>Email: {{ email }} </p>
+  <p>Password: {{ password }}</p>
 </template>
 
 <script>
