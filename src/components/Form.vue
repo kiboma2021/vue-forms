@@ -63,7 +63,9 @@
     </div>
 
     <br> <br>
-    <button type="submit" >Submit</button>
+    <div class="btn" >
+        <button class="submit"> Create an account</button>
+    </div>
   </form>
 
   <p>Name: {{ name }}</p>
@@ -150,6 +152,16 @@ input[type="checkbox"] {
     border-radius: 20px;
     padding: 0.5rem 1rem;
     cursor: pointer;
+}
+.submit {
+    background: rgb(5, 5, 182);
+    border-radius: 10px;
+    color: white;
+    padding: 0.5rem;
+}
+.btn {
+    display: flex;
+    justify-content: center;
 }
 
 </style>
