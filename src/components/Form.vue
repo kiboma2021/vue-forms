@@ -28,9 +28,9 @@
 export default {
     data() {
         return {
-            name: "Ben",
-            email: "admin@localhost.com",
-            password: "password1!"
+            name: "",
+            email: "",
+            password: ""
         }
     }
 
@@ -39,17 +39,31 @@ export default {
 
 <style>
 
+form {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+}
 label {
-    margin: 1rem;
+    color: #aaa;
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     font-weight: bold;
-    padding: 1rem;
 }
 input {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
     border: none;
-    width: 12rem;
-    height: 1rem;
-    margin: 1rem;
-    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    color: #555;
 }
 
 </style>
