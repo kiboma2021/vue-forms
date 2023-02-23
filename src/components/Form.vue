@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit.prevent="handleSubmit">
     <div>
         <label>Name</label>
         <input type="name" v-model="name" required>
@@ -14,6 +14,7 @@
     <div>
         <label>Password</label>
         <input type="password" v-model="password" required>
+        <span class="error">{{ passwordError }}</span>
     </div>
     
     <div>
@@ -87,6 +88,7 @@ export default {
             terms: false,
             units: [],
             skills: [],
+            passwordError: '',
         }
     },
     methods: {
@@ -102,6 +104,14 @@ export default {
             this.skills = this.skills.filter((item) => {
                 return skill !== item
             })
+        },
+        handleSubmit(){
+            //validate password
+            this.passwordError = this.password.length > 5 ? '' : 'Password must be at least 6 characters long'
+
+            if(!this.passwordError){
+                console.log("Successfully submitted")
+            }
         }
     }
 
@@ -162,6 +172,10 @@ input[type="checkbox"] {
 .btn {
     display: flex;
     justify-content: center;
+}
+.error {
+    color: red;
+    font-style: italic;
 }
 
 </style>
